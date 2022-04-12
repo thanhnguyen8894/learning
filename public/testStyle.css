@@ -1,0 +1,61 @@
+/* table, form, input, label, div, p {
+    font-family: serif;          
+}
+
+.inputField{
+    background-color: transparent; 
+    outline: 0;         
+    border-radius: 0px;  
+    border: 1px solid #D9D9D9;
+    width: 100%;
+    font-size: 14px;
+    box-sizing: border-box; 
+    display: flex; 
+    max-width:350px;
+    height: 40px; 
+    padding-inline-start: 10px;
+    color: black
+}
+.inputLabel{
+    color: black; 
+    font-weight: 400; 
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F77E2E;
+    font-weight: 500, Medium;
+    text-decoration: #FFFFFF;
+}
+
+li {
+    float: left;
+    padding-left: 50px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+.submitButton{
+    background-color: #01AEAB; 
+    height: 40px;
+    width: 100%;
+    max-width:350px; 
+    font-weight: 400; 
+    font-size: 15px;
+    color:#FFFFFF; 
+    border: 0ch;
+}
+ */

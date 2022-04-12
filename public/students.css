@@ -1,0 +1,31 @@
+
+form {
+    display: flex;
+    flex:none;
+}
+.studentInfo {
+    margin-top: 100px;
+    border: 1px solid coral;
+
+}
+.fieldInput{
+    font-weight: bold;
+    color:goldenrod;
+    margin-top: auto;
+
+};
+.inputForm{
+
+}
+.submitButton{
+    background-color: #01AEAB; 
+    height: 40px;
+    width: 100%;
+    max-width:350px; 
+    font-weight: 400; 
+    font-size: 15px;
+    color:#FFFFFF; 
+    border: 0ch;
+}
+
+
