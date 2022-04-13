@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change Event</title>
+
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <span style="font-weight: bold;">Age:</span>
+
+    <select id="age-filter" style="height: 25px;">
+        <option>22</option>
+        <option>25</option>
+        <option>33</option>
+        <option>27</option>
+    </select>
+
+    <table id="student-table" style="border: 1px solid;margin-top: 100px ;">
+
+    </table>
+    <script type="text/javascript">
+        var students = [{
+                name: 'Minh',
+                age: 22
+            },
+            {
+                name: 'Trung',
+                age: 22
+            },
+            {
+                name: 'Phước',
+                age: 25
+            },
+            {
+                name: 'Duy',
+                age: 33
+            },
+            {
+                name: 'Thành',
+                age: 27
+            }
+        ];
+
+        var ageFilter = document.getElementById('age-filter');
+        ageFilter.addEventListener('change', onAgeFilterChange);
+
+        function onAgeFilterChange(){
+            //get current value
+            var selectedAge = parseInt(ageFilter.value);
+            // filter when select
+            var filteredStudent = students.filter(function(student){
+                return student.age === selectedAge;
+            })
+            render(filteredStudent);
+            console.log(filteredStudent)
+        }
+
+        function render() {
+            const studentList = document.getElementById('student-table');
+            const content = students.map(function (student) {
+                return '<tr><td>' + student.name + "</td><td>" + student.age + "</td></tr>";
+            });
+            studentList.innerHTML = content.join('');
+        }
+        render();
+    </script>
+
+
+</body>
+
+</html>
