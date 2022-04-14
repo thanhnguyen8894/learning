@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students management</title>
+    <title>Local Storage</title>
     <link rel="shortcut icon" href="/orange_favcon.ico " type="image/x-icon">
     <link rel="stylesheet" href="students.css">
 
@@ -40,7 +40,7 @@
             todoList.push(newData);
                 render();
                 input.value = "";
-                localStorage.getItem(storageKey, todoList);
+                localStorage.setItem(storageKey, todoList);
 
             // if (newData.length === 0) {
             //     alert("Please input data");
