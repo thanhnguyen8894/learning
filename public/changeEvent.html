@@ -70,12 +70,12 @@
             console.log(filteredStudent)
         }
 
-        function render() {
-            const studentList = document.getElementById('student-table');
+        function render(students) {
+            const studentTable = document.getElementById('student-table');
             const content = students.map(function (student) {
                 return '<tr><td>' + student.name + "</td><td>" + student.age + "</td></tr>";
             });
-            studentList.innerHTML = content.join('');
+            studentTable.innerHTML = content.join('');
         }
         render();
     </script>
