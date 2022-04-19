@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+    <link rel="shortcut icon" href="/orange_favcon.ico " type="image/x-icon">
+    <link rel="stylesheet" href="students.css">
+
+    </style>
+
+</head>
+
+<body>
+    <input id="newData" type="text"> <br>
+
+    <button id="addButton">Add value</button>
+    <!-- <button id="deleteButton">Delete</button> -->
+
+    <ul id="todo-list">
+
+    </ul>
+
+
+    <script type="text/javascript">
+        var storageKey = 'todoList';
+        var addButton = document.getElementById("addButton");
+        // addButton.onclick = addValue;
+        addButton.addEventListener('click', addValue)
+        const input = document.getElementById("newData");
+        input.value = sessionStorage.getItem('input value');
+        input.addEventListener('change', updateSession);
+
+        function updateSession(){
+            sessionStorage.setItem('input value', input.value);
+        };
+
+        var todoList = ["hiihihi", "hahahaha", "hohohoho"];
+
+        //add new data to arr todoList
+        function addValue() {
+            // const input = document.getElementById("newData");
+            const newData = input.value;
+            todoList.push(newData);
+                render();
+                input.value = "";
+                localStorage.setItem(storageKey, todoList);
+
+            // if (newData.length === 0) {
+            //     alert("Please input data");
+            // } else {
+            //     todoList.push(newData);
+            //     render();
+            //     input.value = "";
+            //     localStorage.getItem(storageKey, todoList);
+            // }
+            
+        }
+
+        function render() {
+            const htmlList = document.getElementById("todo-list");
+            const content = todoList.map(function (item) {
+                return "<li>" + item + "</li>";
+            });
+
+            htmlList.innerHTML = content.join(" ");
+        }
+        render();
+    </script>
+
+
+</body>
+
+</html>
