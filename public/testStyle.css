@@ -46,7 +46,8 @@ li a {
 }
 
 li a:hover {
-    background-color: #111111;
+    /* background-color: #111111; */
+    background-color: #e2610c;
 }
 .submitButton{
     background-color: #01AEAB; 
@@ -57,5 +58,9 @@ li a:hover {
     font-size: 15px;
     color:#FFFFFF; 
     border: 0ch;
+}
+a:hover {
+    text-decoration: underline;
+    
 }
 
